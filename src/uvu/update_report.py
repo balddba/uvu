@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from update_uv_packages.package_update import PackageUpdate
+from uvu.package_update import PackageUpdate
 
 
 @dataclass

@@ -8,12 +8,12 @@ from pathlib import Path
 from typing import Any, Sequence
 import pytest
 
-from update_uv_packages.direct_dependency import DirectDependency
-from update_uv_packages.package_update import PackageUpdate
-from update_uv_packages.project_layout import ProjectLayout
-from update_uv_packages.update_report import UpdateReport
-from update_uv_packages.uv_dependency_manager import UVDependencyManager
-from update_uv_packages.workspace_member import WorkspaceMember
+from uvu.direct_dependency import DirectDependency
+from uvu.package_update import PackageUpdate
+from uvu.project_layout import ProjectLayout
+from uvu.update_report import UpdateReport
+from uvu.uv_dependency_manager import UVDependencyManager
+from uvu.workspace_member import WorkspaceMember
 
 
 def test_dataclass_properties() -> None:
@@ -1145,7 +1145,7 @@ def test_discover_updates_with_outdated_direct_deps(
 
 def test_core_facade() -> None:
     """Test that core.py facade re-exports all classes correctly."""
-    import update_uv_packages.core as core
+    import uvu.core as core
 
     assert core.DirectDependency is DirectDependency
     assert core.PackageUpdate is PackageUpdate

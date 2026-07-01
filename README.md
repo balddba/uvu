@@ -51,7 +51,7 @@ You can import and orchestrate updates directly inside other Python scripts:
 
 ```python
 from pathlib import Path
-from update_uv_packages import UVDependencyManager
+from uvu import UVDependencyManager
 
 # Initialize the manager pointing to your project
 manager = UVDependencyManager(start_dir=Path("/path/to/project"))

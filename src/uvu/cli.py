@@ -9,9 +9,9 @@ from pathlib import Path
 from packaging.requirements import Requirement
 from packaging.version import Version
 from tabulate import tabulate
-from update_uv_packages.package_update import PackageUpdate
-from update_uv_packages.update_report import UpdateReport
-from update_uv_packages.uv_dependency_manager import UVDependencyManager
+from uvu.package_update import PackageUpdate
+from uvu.update_report import UpdateReport
+from uvu.uv_dependency_manager import UVDependencyManager
 
 
 def print_report(*, report: UpdateReport) -> None:

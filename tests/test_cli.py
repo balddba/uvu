@@ -8,15 +8,15 @@ from pathlib import Path
 from typing import Any
 import pytest
 
-from update_uv_packages.cli import (
+from uvu.cli import (
     build_parser,
     cmd_check,
     cmd_update,
     main,
     print_report,
 )
-from update_uv_packages.package_update import PackageUpdate
-from update_uv_packages.update_report import UpdateReport
+from uvu.package_update import PackageUpdate
+from uvu.update_report import UpdateReport
 
 
 def test_print_report_empty(capsys: pytest.CaptureFixture[str]) -> None:
@@ -122,7 +122,7 @@ def test_cmd_check(
             return "direct"
 
     # Monkeypatch the real UVDependencyManager with our mock
-    monkeypatch.setattr("update_uv_packages.cli.UVDependencyManager", MockManager)
+    monkeypatch.setattr("uvu.cli.UVDependencyManager", MockManager)
 
     # Run check subcommand with verbose flag
     args = argparse.Namespace(
@@ -170,7 +170,7 @@ def test_cmd_update_no_updates(
         def print_update_table(self, updates: Any, title: str, **kwargs: Any) -> None:
             pass
 
-    monkeypatch.setattr("update_uv_packages.cli.UVDependencyManager", MockManager)
+    monkeypatch.setattr("uvu.cli.UVDependencyManager", MockManager)
 
     args = argparse.Namespace(
         project_dir=None,
@@ -231,7 +231,7 @@ def test_cmd_update_lock_failed(
                 args=[], returncode=1, stdout="", stderr="Upgrade failed"
             )
 
-    monkeypatch.setattr("update_uv_packages.cli.UVDependencyManager", MockManager)
+    monkeypatch.setattr("uvu.cli.UVDependencyManager", MockManager)
 
     args = argparse.Namespace(
         project_dir=None,
@@ -309,7 +309,7 @@ def test_cmd_update_success(
         def prompt_package_selection(self, updates: Any) -> list[str]:
             return self.selected_packages
 
-    monkeypatch.setattr("update_uv_packages.cli.UVDependencyManager", MockManager)
+    monkeypatch.setattr("uvu.cli.UVDependencyManager", MockManager)
 
     # Use prompt fallback (simulating empty choice -> returns empty list)
     args = argparse.Namespace(
@@ -356,7 +356,7 @@ def test_main(monkeypatch: pytest.MonkeyPatch) -> None:
         called_args.append(args)
         return 42
 
-    monkeypatch.setattr("update_uv_packages.cli.cmd_check", mock_cmd_check)
+    monkeypatch.setattr("uvu.cli.cmd_check", mock_cmd_check)
 
     code = main(["check", "--verbose"])
     assert code == 42
@@ -417,7 +417,7 @@ def test_cmd_update_yes(
         ) -> list[Any]:
             return []
 
-    monkeypatch.setattr("update_uv_packages.cli.UVDependencyManager", MockManager)
+    monkeypatch.setattr("uvu.cli.UVDependencyManager", MockManager)
 
     args = argparse.Namespace(
         project_dir=None,
@@ -485,7 +485,7 @@ def test_cmd_update_pin_all(
         ) -> list[Any]:
             return [("standalone", "project", "requests", "requests==2.29.0")]
 
-    monkeypatch.setattr("update_uv_packages.cli.UVDependencyManager", MockManager)
+    monkeypatch.setattr("uvu.cli.UVDependencyManager", MockManager)
 
     args = argparse.Namespace(
         project_dir=None,
@@ -539,7 +539,7 @@ def test_cmd_check_with_blocked_updates(
         def print_update_table(self, updates: Any, title: str, **kwargs: Any) -> None:
             print(f"{title}: requests 2.28.0 -> 2.34.2")
 
-    monkeypatch.setattr("update_uv_packages.cli.UVDependencyManager", MockManager)
+    monkeypatch.setattr("uvu.cli.UVDependencyManager", MockManager)
 
     args = argparse.Namespace(
         project_dir=None, verbose=False, all_members=True, yes=True
@@ -613,7 +613,7 @@ def test_cmd_update_with_blocked_updates(
         ) -> list[Any]:
             return []
 
-    monkeypatch.setattr("update_uv_packages.cli.UVDependencyManager", MockManager)
+    monkeypatch.setattr("uvu.cli.UVDependencyManager", MockManager)
 
     args = argparse.Namespace(
         project_dir=None,
@@ -710,7 +710,7 @@ def test_cmd_update_with_blocking_constraints(
         def load_layout_direct_dependencies(self) -> dict[str, list[Any]]:
             return mock_direct_deps
 
-    monkeypatch.setattr("update_uv_packages.cli.UVDependencyManager", MockManager)
+    monkeypatch.setattr("uvu.cli.UVDependencyManager", MockManager)
 
     # Run update subcommand with packages=[requests, click, urllib3, noupdate, nonexistent]
     args = argparse.Namespace(

@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
-from update_uv_packages.workspace_member import WorkspaceMember
+from uvu.workspace_member import WorkspaceMember
 
 
 @dataclass(frozen=True)

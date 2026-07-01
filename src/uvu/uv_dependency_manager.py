@@ -16,10 +16,10 @@ from packaging.requirements import Requirement
 from packaging.utils import canonicalize_name
 from tabulate import tabulate
 
-from update_uv_packages.direct_dependency import DirectDependency
-from update_uv_packages.package_update import PackageUpdate
-from update_uv_packages.project_layout import ProjectLayout
-from update_uv_packages.workspace_member import WorkspaceMember
+from uvu.direct_dependency import DirectDependency
+from uvu.package_update import PackageUpdate
+from uvu.project_layout import ProjectLayout
+from uvu.workspace_member import WorkspaceMember
 
 UPDATE_LINE_RE = re.compile(r"^Update (\S+) v(.+?) -> v(.+?)$")
 

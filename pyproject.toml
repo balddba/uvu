@@ -15,12 +15,12 @@ dependencies = [
 ]
 
 [project.scripts]
-update-uv-packages = "update_uv_packages.cli:main"
-uvu = "update_uv_packages.cli:main"
+update-uv-packages = "uvu.cli:main"
+uvu = "uvu.cli:main"
 
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/update_uv_packages"]
+packages = ["src/uvu"]
 
 [dependency-groups]
 dev = [
@@ -29,7 +29,7 @@ dev = [
 ]
 
 [tool.pytest.ini_options]
-addopts = "--cov=update_uv_packages --cov-report=term-missing"
+addopts = "--cov=uvu --cov-report=term-missing"
 pythonpath = ["src"]
 
 
