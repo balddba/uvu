@@ -914,7 +914,7 @@ def test_parse_tree_outdated_lines() -> None:
     """Test parse_tree_outdated_lines correct detection and fields matching."""
     manager = UVDependencyManager()
     output = """
-    update-uv-packages v0.1.0
+    uvu v0.1.0
     ├── requests v2.28.0 (latest: v2.34.2)
     └── urllib3 v1.26.20 (latest: v2.7.0)
     """

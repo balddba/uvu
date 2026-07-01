@@ -230,7 +230,7 @@ wheels = [
 ]
 
 [[package]]
-name = "update-uv-packages"
+name = "uvu"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [

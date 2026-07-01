@@ -1,4 +1,4 @@
-# update-uv-packages
+# uvu
 
 A clean standalone Python utility and library to check and update `uv`-managed project dependencies with optional target pinning back to your `pyproject.toml`.
 
@@ -14,12 +14,12 @@ A clean standalone Python utility and library to check and update `uv`-managed p
 Install via pip or run directly using `uv`:
 
 ```bash
-pip install update-uv-packages
+pip install uvu
 ```
 
 Or run on-the-fly:
 ```bash
-uvx --from update-uv-packages uvu check
+uvx uvu check
 ```
 
 ## CLI Usage

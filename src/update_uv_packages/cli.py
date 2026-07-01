@@ -1,4 +1,4 @@
-"""CLI entry point and command parsing for update-uv-packages."""
+"""CLI entry point and command parsing for uvu."""
 
 from __future__ import annotations
 
