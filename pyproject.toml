@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "update-uv-packages"
+version = "0.1.0"
+description = "Check and update uv-managed project dependencies with optional pyproject pinning."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "tabulate>=0.9.0",
+    "packaging>=22.0",
+]
+
+[project.scripts]
+update-uv-packages = "update_uv_packages.cli:main"
+uvu = "update_uv_packages.cli:main"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/update_uv_packages"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "--cov=update_uv_packages --cov-report=term-missing"
+pythonpath = ["src"]
+
+
