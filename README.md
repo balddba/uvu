@@ -1,13 +1,17 @@
-![uvu logo](assets/uvu-logo.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/balddba/uvu/master/assets/uvu-logo.png" width="220" alt="uvu logo">
+</p>
 
-# uvu
+<h1 align="center">uvu</h1>
 
-[![PyPI version](https://img.shields.io/pypi/v/uvu.svg)](https://pypi.org/project/uvu/)
-[![Python versions](https://img.shields.io/pypi/pyversions/uvu.svg)](https://pypi.org/project/uvu/)
-[![License](https://img.shields.io/badge/license-AGPL--3.0-blue)](./LICENSE)
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+<p align="center">
+  <a href="https://pypi.org/project/uvu/"><img src="https://img.shields.io/pypi/v/uvu.svg" alt="PyPI version"></a>
+  <a href="https://pypi.org/project/uvu/"><img src="https://img.shields.io/pypi/pyversions/uvu.svg" alt="Python versions"></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-AGPL--3.0-blue" alt="License"></a>
+  <a href="https://github.com/astral-sh/ruff"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json" alt="Ruff"></a>
+</p>
 
-A clean standalone Python utility and library to check and update `uv`-managed project dependencies with optional target pinning back to your `pyproject.toml`.
+A clean standalone Python utility and library to check and update `uv`-managed project dependencies with optional target pinning back to your `pyproject.toml`. View on [PyPI](https://pypi.org/project/uvu/).
 
 ## Features
 * **Workspace Support**: Resolves standalone projects or complex `uv` workspaces interactively or via CLI flags.
