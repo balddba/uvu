@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/balddba/uvu/master/assets/uvu-logo.png" width="220" alt="uvu logo">
+  <img src="https://raw.githubusercontent.com/balddba/uvu/master/assets/uvu-logo-220.png" width="220" alt="uvu logo">
 </p>
 
 <h1 align="center">uvu</h1>
@@ -12,6 +12,10 @@
 </p>
 
 A clean standalone Python utility and library to check and update `uv`-managed project dependencies with optional target pinning back to your `pyproject.toml`. View on [PyPI](https://pypi.org/project/uvu/).
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/balddba/uvu/master/assets/uvu-cli-demo.gif" width="1280" alt="uvu CLI demo: check updates and pin packages">
+</p>
 
 ## Features
 * **Workspace Support**: Resolves standalone projects or complex `uv` workspaces interactively or via CLI flags.
