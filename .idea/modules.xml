@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/updaate-uv-packages.iml" filepath="$PROJECT_DIR$/.idea/updaate-uv-packages.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/uvu.iml" filepath="$PROJECT_DIR$/.idea/uvu.iml" />
     </modules>
   </component>
 </project>

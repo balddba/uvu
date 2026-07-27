@@ -14,7 +14,7 @@
 A clean standalone Python utility and library to check and update `uv`-managed project dependencies with optional target pinning back to your `pyproject.toml`. View on [PyPI](https://pypi.org/project/uvu/).
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/balddba/uvu/master/assets/uvu-cli-demo.gif" width="1280" alt="uvu CLI demo: check updates and pin packages">
+  <img src="[https://raw.githubusercontent.com/balddba/uvu/master/assets/uvu-cli-demo.gif](https://github.com/balddba/uvu/blob/master/assets/uvu-cli-demo.gif?raw=true)" width="1280" alt="uvu CLI demo: check updates and pin packages">
 </p>
 
 ## Features

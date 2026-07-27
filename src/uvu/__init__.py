@@ -9,6 +9,8 @@ from uvu.update_report import UpdateReport
 from uvu.uv_dependency_manager import UVDependencyManager
 from uvu.workspace_member import WorkspaceMember
 
+__version__ = "0.1.3"
+
 __all__ = [
     "DirectDependency",
     "PackageUpdate",
